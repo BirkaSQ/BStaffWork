@@ -5,6 +5,4 @@ main: ru.birkasq.staffwork.StaffWork
 depend: [LuckPerms]
 commands:
   staffwork:
-    description: /staffwork
-    usage: /staffwork
-    aliases: [sw,work]
+    aliases: [sw]
