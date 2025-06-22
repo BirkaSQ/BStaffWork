@@ -1,0 +1,38 @@
+# Задержка перед использованием /sw
+delay: 10 # Задержка в секундах
+
+# Блокировка на использование предмета
+blocked-usage:
+  - item1
+  - item2
+  - item3
+
+# Настройки сообщений
+messages:
+  nousage: "&6StaffWork&7: &fВы не можете использовать этот предмет, пока находитесь в режиме StaffWork." # Может быть полезно если хотите заблокировать использование лука
+  nogroup: "&6StaffWork&7: &fУ вас нет группы" # Если у человека вообще нет группы в LuckPerms
+  noconfig: "&6StaffWork&7: &fВы не можете начать режим работы." # Есть право staffwork.use , но нет группы из конфига
+  staffWorkEnabled: "&6StaffWork&7: &fРежим работы включен."
+  staffWorkDisabled: "&6StaffWork&7: &fРежим работы выключен."
+  noPermission: "&6StaffWork&7: У вас недостаточно прав."
+  cooldown: "&6StaffWork&7: Вы не можете использовать команду еще %delay% секунд."
+  stats: # Вывод статистики игрока
+    format:
+      - "&fСтатистика игрока &6{player}"
+      - ""
+      - "&fБаны: &6{total_ban_day} &7(день) | &6{total_ban_month} &7(месяц) | &6{total_ban_allTime} &7(всего)"
+      - "&fМуты: &6{total_mute_day} &7(день) | &6{total_mute_month} &7(месяц) | &6{total_mute_allTime} &7(всего)"
+    player-not-found: "&fИгрок &6{player} &fне найден в статистике"
+
+# Настройки команд для разных групп игроков
+groupCommands:
+  moder:
+    enable:
+    - "lp user %player% parent add moder"
+    disable:
+    - "lp user %player% parent remove moder"
+  offmoder:
+    enable:
+    - "lp user %player% parent add moder"
+    disable:
+    - "lp user %player% parent remove moder"
